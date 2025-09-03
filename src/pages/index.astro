@@ -121,10 +121,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <Section title='Education'>
         <Card
           as='a'
-          heading='Lorem ipsum'
-          subheading='Lorem ipsum dolor sit amet, vidit suscipit at mei.'
-          date='August 2021 - July 2025'
-          href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          heading='国防科技大学 NUDT'
+          subheading='电子科学学院 信息工程 Information Engineering'
+          date='August 2019 - July 2023'
+          href='https://www.nudt.edu.cn/'
         >
           {
             /* <ul class='ms-4 list-disc text-muted-foreground'>
@@ -136,9 +136,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </ul> */
           }
         </Card>
+        <Card
+          as='a'
+          heading='香港中文大学 CUHK'
+          subheading='电子工程系 Electronic Engineering'
+          date='August 2024 - October 2025'
+          href='https://www.nudt.edu.cn/'
+        ></Card>
       </Section>
 
-      <Section title='Website List'>
+      <Section title='Project List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
             href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -183,6 +190,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Backend' skills={backend} />
       </Section>
     </div>
-    <Quote class='mt-12' />
+    // <Quote class='mt-12' />
   </main>
 </PageLayout>
