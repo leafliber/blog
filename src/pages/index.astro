@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 
-import { Quote } from 'astro-pure/advanced'
+// import { Quote } from 'astro-pure/advanced'
 import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import { Button, Card, Icon, Label } from 'astro-pure/user'
@@ -12,7 +12,7 @@ import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
+const languages = ['Python', 'C++', 'Rust']
 const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
 const backend = ['Vercel', 'Waline']
 
@@ -38,9 +38,17 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
             <Icon name='location' class='size-5' slot='icon' />
           </Label>
           <Label
-            title='Source code'
+            title='Github'
             as='a'
-            href='https://github.com/cworld1/astro-theme-pure'
+            href='https://github.com/leafiber'
+            target='_blank'
+          >
+            <Icon name='github' class='size-5' slot='icon' />
+          </Label>
+          <Label
+            title='Gitee'
+            as='a'
+            href='https://gitea.airo.cc/Fiber'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
@@ -48,7 +56,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </div>
       </div>
 
-      {/* Get template */}
+      {/* Get template 
       <a
         href='https://github.com/cworld1/astro-theme-pure'
         target='_blank'
@@ -63,14 +71,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <p class='font-medium text-muted-foreground'>Get Template</p>
       </a>
     </section>
-
+    */}
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Developer / Designer</p>
+        <p class='text-muted-foreground'>人工智能 软件开发 / AI Software Designer</p>
         <p class='text-muted-foreground'>
-          Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione
-          indoctum dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel,
-          at eum oratio possit voluptatum.
+          一个即将毕业的学生，正在寻求自我的提升 <br />
+          Hi, I'm Leafiber. I am a lifelong learner. A graduating student looking for self-improvement.<br />
+          网站重建中...
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
@@ -148,22 +156,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <Section title='Project List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            href='https://airo.cc'
             heading='Lorem ipsum'
             subheading='dolor sit amet, oratio ornatus explicari pro ex'
             imagePath='/src/assets/projects/alex-tyson-2BAXJ7ha74s-unsplash.jpg'
-          />
-          <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='dolor sit amet, oratio ornatus explicari pro ex'
-            imagePath='/src/assets/projects/angelica-teran-Bk9hpaXHK4o-unsplash.jpg'
-          />
-          <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='dolor sit amet, oratio ornatus explicari pro ex'
-            imagePath='/src/assets/projects/kseniia-zapiatkina-yATU3rg8tNI-unsplash.jpg'
           />
           <ProjectCard
             href='/projects'
@@ -173,7 +169,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           />
         </div>
       </Section>
-
+      
+      { /*
       <Section title='Certifications'>
         <Card
           as='a'
@@ -183,13 +180,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         />
       </Section>
-
+      */}
       <Section title='Skills'>
         <SkillLayout title='Languages' skills={languages} />
         <SkillLayout title='Frontend' skills={frontend} />
         <SkillLayout title='Backend' skills={backend} />
       </Section>
     </div>
-    // <Quote class='mt-12' />
+    { // <Quote class='mt-12' /> 
+    }
   </main>
 </PageLayout>
